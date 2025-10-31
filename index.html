@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>알록달록 공룡 친구들 — 백악기 초식공룡 10</title>
+  <meta name="description" content="유아를 위한 깜찍한 백악기 초식공룡 10마리 소개" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Jua&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff7f0; /* 따뜻한 바닐라 */
+      --fg:#1f2937; /* 글자 */
+      --card:#ffffff;
+      --line:#ffd9b3; 
+      --accent:#ff7aa2; /* 포인트 */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family: Fredoka, Jua, 'Noto Sans KR', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--fg)}
+    a{text-decoration:none;color:inherit}
+
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,247,240,.9);backdrop-filter:blur(6px);border-bottom:4px dotted var(--line)}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 4px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+    .logo-bubble{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#ffa4c3,#ffcf86)}
+    .logo-text{font-family:Jua;letter-spacing:.5px;font-size:22px}
+    .nav{display:flex;gap:12px}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:2px dashed var(--line);background:#fff}
+    .chip:hover{transform:translateY(-1px)}
+
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;padding:26px 0}
+    .title{font-family:Jua;font-size:clamp(26px,5vw,44px);line-height:1.1;margin:0}
+    .subtitle{margin:8px 0 0;color:#6b7280}
+    .cloud{border:3px dashed var(--line);background:#fff;border-radius:24px;padding:14px}
+
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{background:var(--card);border:3px solid var(--line);border-radius:24px;padding:14px;display:grid;grid-template-columns:120px 1fr;gap:12px;align-items:center;box-shadow:0 6px 0 #ffd9b3}
+    .card h3{font-family:Jua;margin:0 0 4px;font-size:20px}
+    .fact{font-size:14px;color:#64748b;margin:2px 0}
+    .say{display:inline-block;margin-top:4px;font-size:12px;background:#fff4f9;border:2px dotted #ffb1c7;border-radius:999px;padding:4px 8px}
+
+    .stamp{font-size:12px;color:#64748b;margin:10px 0 0}
+
+    .footer{margin:28px 0 40px;text-align:center;color:#6b7280;font-size:14px}
+
+    .swatch{display:flex;gap:8px;flex-wrap:wrap}
+    .sw{width:18px;height:18px;border-radius:6px;border:2px solid #00000010}
+
+    /* Dino palette */
+    .c-pink { background: radial-gradient(circle at 30% 30%, #ffd1e5, #ff88b7); }
+    .c-mint { background: radial-gradient(circle at 30% 30%, #c0ffe3, #70e1b5); }
+    .c-sky  { background: radial-gradient(circle at 30% 30%, #cfe8ff, #7dc1ff); }
+    .c-sun  { background: radial-gradient(circle at 30% 30%, #fff0b9, #ffd36a); }
+    .c-lav  { background: radial-gradient(circle at 30% 30%, #eadcff, #c1a6ff); }
+    .c-grn  { background: radial-gradient(circle at 30% 30%, #dfffd9, #9be78a); }
+    .c-org  { background: radial-gradient(circle at 30% 30%, #ffe0cf, #ffb88a); }
+    .c-ice  { background: radial-gradient(circle at 30% 30%, #dffbff, #9fe3f0); }
+    .c-rose { background: radial-gradient(circle at 30% 30%, #ffe6ef, #ffb6c9); }
+    .c-lime { background: radial-gradient(circle at 30% 30%, #ecffd9, #c9f37a); }
+
+    /* Simple cute SVG frame */
+    .thumb{width:120px;height:120px;border-radius:20px;border:3px solid #0000000f;display:grid;place-items:center}
+
+    .legend{display:flex;gap:10px;align-items:center;margin-top:8px}
+    .legend .dot{width:10px;height:10px;border-radius:50%}
+
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .card{grid-template-columns:96px 1fr}
+      .thumb{width:96px;height:96px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap top">
+      <div class="logo">
+        <div class="logo-bubble" aria-hidden="true"></div>
+        <div class="logo-text">알록달록 공룡 친구들</div>
+      </div>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="chip" href="#list">공룡 보기</a>
+        <a class="chip" href="#how">읽는 팁</a>
+        <a class="chip" href="#colors">색 조합</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="top">
+      <div>
+        <h1 class="title">백악기 시대 <span style="background:linear-gradient(90deg,#ff7aa2,#ffcf86);-webkit-background-clip:text;background-clip:text;color:transparent">초식공룡 10</span>마리</h1>
+        <p class="subtitle">실사 사진이 아닌 <strong>귀여운 그림</strong> 느낌으로 만나보는 공룡 친구들! 유아 눈높이에 맞춰 <strong>한 줄 특징</strong>을 알려줘요.</p>
+        <p class="stamp" aria-live="polite">업데이트: 2025-10-31</p>
+      </div>
+      <div class="cloud" aria-label="읽는 팁">
+        <strong>부모님 TIP</strong><br/>
+        공룡 이름을 크게 읽고, 아이가 <em>색</em>과 <em>모양</em>을 골라보게 해주세요. “어떤 소리를 냈을까?” “뭘 먹었을까?” 같이 상상 놀이를 곁들여요.
+      </div>
+    </section>
+
+    <section id="list" aria-labelledby="list-heading">
+      <h2 id="list-heading" class="title" style="font-size:28px;margin:0 0 12px">공룡 친구들 목록</h2>
+      <div class="grid">
+        <!-- 1 Triceratops -->
+        <article class="card" aria-label="트리케라톱스 카드">
+          <div class="thumb c-rose">
+            <!-- 귀여운 뿔 장식 -->
+            <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="뿔 달린 귀여운 공룡 그림">
+              <ellipse cx="42" cy="48" rx="30" ry="22" fill="#fff6fa"/>
+              <circle cx="32" cy="44" r="4" fill="#333"/>
+              <circle cx="52" cy="44" r="4" fill="#333"/>
+              <path d="M20 40 L28 28 L30 40 Z" fill="#ffd1e5"/>
+              <path d="M64 40 L56 28 L54 40 Z" fill="#ffd1e5"/>
+              <path d="M40 30 L42 18 L44 30 Z" fill="#ffd1e5"/>
+            </svg>
+          </div>
+          <div>
+            <h3>트리케라톱스 (Triceratops)</h3>
+            <p class="fact">세 개의 뿔과 큰 프릴! 낮은 식물을 아작아작 먹었어요.</p>
+            <span class="say">읽기: 트리-케-라-톱-스</span>
+          </div>
+        </article>
+
+        <!-- 2 Ankylosaurus -->
+        <article class="card" aria-label="안킬로사우루스 카드">
+          <div class="thumb c-mint">
+            <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="꼬리 망치 공룡 그림">
+              <ellipse cx="46" cy="50" rx="28" ry="20" fill="#f2fffa"/>
+              <rect x="18" y="46" width="14" height="8" rx="4" fill="#d9fff0"/>
+              <circle cx="18" cy="50" r="6" fill="#c0ffe3"/>
+              <circle cx="58" cy="46" r="3" fill="#333"/>
+              <circle cx="66" cy="46" r="3" fill="#333"/>
+              <g fill="#9be78a">
+                <circle cx="40" cy="38" r="3"/>
+                <circle cx="46" cy="36" r="3"/>
+                <circle cx="52" cy="38" r="3"/>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <h3>안킬로사우루스 (Ankylosaurus)</h3>
+            <p class="fact">단단한 등껍질과 <strong>망치 꼬리</strong>로 스스로 지켰어요.</p>
+            <span class="say">읽기: 안-킬-로-사-우-루-스</span>
+          </div>
+        </article>
+
+        <!-- 3 Parasaurolophus -->
+        <article class="card" aria-label="파라사우롤로푸스 카드">
+          <div class="thumb c-sky">
+            <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="긴 볏 공룡 그림">
+              <ellipse cx="42" cy="50" rx="30" ry="20" fill="#f6fbff"/>
+              <path d="M52 30 C70 18, 76 16, 64 34" fill="#cfe8ff"/>
+              <circle cx="50" cy="44" r="4" fill="#333"/>
+            </svg>
+          </div>
+          <div>
+            <h3>파라사우롤로푸스 (Parasaurolophus)</h3>
+            <p class="fact">긴 볏으로 <strong>부우웅~</strong> 소리를 냈대요.</p>
+            <span class="say">읽기: 파-라-사-우-롤-로-푸-스</span>
+          </div>
+        </article>
+
+        <!-- 4 Corythosaurus -->
+        <article class="card" aria-label="코리토사우루스 카드">
+          <div class="thumb c-sun">
+            <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="투구 볏 공룡 그림">
+              <ellipse cx="42" cy="50" rx="30" ry="20" fill="#fff9e3"/>
+              <rect x="48" y="28" width="10" height="10" rx="3" fill="#ffe8a8"/>
+              <circle cx="52" cy="44" r="4" fill="#333"/>
+            </svg>
+          </div>
+          <div>
+            <h3>코리토사우루스 (Corythosaurus)</h3>
+            <p class="fact">머리 위 투구 같은 볏! 무리 지어 풀을 뜯었어요.</p>
+            <span class="say">읽기: 코-리-토-사-우-루-스</span>
+          </div>
+        </article>
+
+        <!-- 5 Edmontosaurus -->
+        <article class="card" aria-label="에드몬토사우루스 카드">
+          <div class="thumb c-lav">
+            <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="오리부리 공룡 그림">
+              <ellipse cx="42" cy="50" rx="30" ry="20" fill="#f7f3ff"/>
+              <rect x="54" y="44" width="10" height="6" rx="3" fill="#eadcff"/>
+              <circle cx="50" cy="44" r="4" fill="#333"/>
+            </svg>
+          </div>
+          <div>
+            <h3>에드몬토사우루스 (Edmontosaurus)</h3>
+            <p class="fact">오리처럼 납작한 입으로 잎을 <strong>와작와작</strong>.</p>
+            <span class="say">읽기: 에-드-몬-토-사-우-루-스</span>
+          </div>
+        </article>
+
+        <!-- 6 Maiasaura -->
+        <article class="card" aria-label="마이아사우라 카드">
+          <div class="thumb c-grn">
+            <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="둥지 지키는 공룡 그림">
+              <ellipse cx="42" cy="50" rx="30" ry="20" fill="#f3fff0"/>
+              <circle cx="38" cy="44" r="4" fill="#333"/>
+              <circle cx="48" cy="44" r="4" fill="#333"/>
+              <circle cx="30" cy="60" r="6" fill="#c9f7bf"/>
+            </svg>
+          </div>
+          <div>
+            <h3>마이아사우라 (Maiasaura)</h3>
+            <p class="fact">이름 뜻은 “<strong>착한 엄마 도마뱀</strong>”! 새끼를 잘 돌봤대요.</p>
+            <span class="say">읽기: 마-이-아-사-우-라</span>
+          </div>
+        </article>
+
+        <!-- 7 Iguanodon -->
+        <article class="card" aria-label="이구아노돈 카드">
+          <div class="thumb c-org">
+            <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="엄지 뾰족 공룡 그림">
+              <ellipse cx="42" cy="50" rx="30" ry="20" fill="#fff3ea"/>
+              <rect x="56" y="40" width="6" height="8" rx="2" fill="#ffd1b3"/>
+              <circle cx="50" cy="44" r="4" fill="#333"/>
+            </svg>
+          </div>
+          <div>
+            <h3>이구아노돈 (Iguanodon)</h3>
+            <p class="fact">손에 <strong>뾰족한 엄지</strong>가 있어요! 잎을 집어 먹었대요.</p>
+            <span class="say">읽기: 이-구-아-노-돈</span>
+          </div>
+        </article>
+
+        <!-- 8 Protoceratops -->
+        <article class="card" aria-label="프로토케라톱스 카드">
+          <div class="thumb c-ice">
+            <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="작은 프릴 공룡 그림">
+              <ellipse cx="42" cy="50" rx="30" ry="20" fill="#f0feff"/>
+              <rect x="28" y="36" width="16" height="10" rx="5" fill="#dffbff"/>
+              <circle cx="50" cy="44" r="4" fill="#333"/>
+            </svg>
+          </div>
+          <div>
+            <h3>프로토케라톱스 (Protoceratops)</h3>
+            <p class="fact">트리케라톱스의 <strong>작은 친척</strong>! 모래바람 사막에서도 살았어요.</p>
+            <span class="say">읽기: 프로-토-케-라-톱-스</span>
+          </div>
+        </article>
+
+        <!-- 9 Styracosaurus -->
+        <article class="card" aria-label="스티라코사우루스 카드">
+          <div class="thumb c-pink">
+            <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="뾰족뾰족 프릴 공룡 그림">
+              <ellipse cx="42" cy="50" rx="30" ry="20" fill="#fff0f6"/>
+              <g fill="#ffd1e5">
+                <rect x="26" y="32" width="4" height="10" rx="2"/>
+                <rect x="32" y="28" width="4" height="12" rx="2"/>
+                <rect x="38" y="26" width="4" height="14" rx="2"/>
+                <rect x="44" y="28" width="4" height="12" rx="2"/>
+                <rect x="50" y="32" width="4" height="10" rx="2"/>
+              </g>
+              <circle cx="50" cy="44" r="4" fill="#333"/>
+            </svg>
+          </div>
+          <div>
+            <h3>스티라코사우루스 (Styracosaurus)</h3>
+            <p class="fact">머리 뒤 <strong>뾰족뾰족 가시</strong>들! 멋진 장식이었대요.</p>
+            <span class="say">읽기: 스-티-라-코-사-우-루-스</span>
+          </div>
+        </article>
+
+        <!-- 10 Chasmosaurus -->
+        <article class="card" aria-label="카스모사우루스 카드">
+          <div class="thumb c-lime">
+            <svg width="84" height="84" viewBox="0 0 84 84" role="img" aria-label="큰 프릴 공룡 그림">
+              <ellipse cx="42" cy="50" rx="30" ry="20" fill="#f6ffe5"/>
+              <rect x="24" y="30" width="22" height="12" rx="6" fill="#ecffd9"/>
+              <circle cx="52" cy="44" r="4" fill="#333"/>
+            </svg>
+          </div>
+          <div>
+            <h3>카스모사우루스 (Chasmosaurus)</h3>
+            <p class="fact">얼굴 뒤 <strong>커다란 프릴</strong>이 있어요! 친구들과 풀밭을 걸었대요.</p>
+            <span class="say">읽기: 카-스-모-사-우-루-스</span>
+          </div>
+        </article>
+      </div>
+      <p class="stamp">※ 이 페이지의 그림은 모두 <strong>귀여운 일러스트 느낌</strong>의 데모 SVG입니다.</p>
+    </section>
+
+    <section id="how" class="cloud" style="margin-top:18px">
+      <h2 class="title" style="font-size:24px;margin:0 0 8px">놀이처럼 읽는 방법</h2>
+      <ul style="margin:0 0 4px 18px">
+        <li>공룡 이름을 <strong>박자</strong>에 맞춰 쿵짝쿵짝!</li>
+        <li>“무엇을 먹었을까?” → 잎, 풀, 솔잎 등 말놀이.</li>
+        <li>공룡의 <strong>색</strong>을 아이가 직접 고르게 해보세요.</li>
+      </ul>
+    </section>
+
+    <section id="colors" style="margin-top:18px">
+      <h2 class="title" style="font-size:24px;margin:0 0 8px">색 조합</h2>
+      <div class="swatch">
+        <div class="sw c-rose" title="핑크"></div>
+        <div class="sw c-mint" title="민트"></div>
+        <div class="sw c-sky" title="하늘"></div>
+        <div class="sw c-sun" title="노랑"></div>
+        <div class="sw c-lav" title="보라"></div>
+        <div class="sw c-grn" title="연두"></div>
+        <div class="sw c-org" title="오렌지"></div>
+        <div class="sw c-ice" title="아이스"></div>
+        <div class="sw c-lime" title="라임"></div>
+      </div>
+    </section>
+
+    <section class="cloud" style="margin-top:18px" aria-label="안내">
+      <p style="margin:0">✔ 본 페이지는 유아용 교육·놀이 목적의 <strong>예시</strong>로, 공룡 그림은 사실적 묘사가 아닌 <em>귀여운 스타일</em>이에요.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2025 알록달록 공룡 친구들 · 데모 페이지
+  </footer>
+</body>
+</html>
